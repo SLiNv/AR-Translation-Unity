@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AR-Translation-Unity", "AR-Translation-Unity.csproj", "{94B26162-1C83-F964-41E4-BE1CFF2DC694}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AR-Translation-Unity.Editor", "AR-Translation-Unity.Editor.csproj", "{36A3441E-57DA-6A0E-0140-4316A0230B1C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94B26162-1C83-F964-41E4-BE1CFF2DC694}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94B26162-1C83-F964-41E4-BE1CFF2DC694}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94B26162-1C83-F964-41E4-BE1CFF2DC694}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94B26162-1C83-F964-41E4-BE1CFF2DC694}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36A3441E-57DA-6A0E-0140-4316A0230B1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36A3441E-57DA-6A0E-0140-4316A0230B1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36A3441E-57DA-6A0E-0140-4316A0230B1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36A3441E-57DA-6A0E-0140-4316A0230B1C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
