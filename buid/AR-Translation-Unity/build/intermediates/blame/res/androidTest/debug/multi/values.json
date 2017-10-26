@@ -1,0 +1,47 @@
+[
+    {
+        "outputFile": "C:\\Users\\victor\\Documents\\AR-Translation-Unity\\buid\\AR-Translation-Unity\\build\\intermediates\\incremental\\mergeDebugAndroidTestResources\\merged.dir\\values\\values.xml",
+        "map": [
+            {
+                "to": {
+                    "startLine": 2,
+                    "startColumn": 4,
+                    "startOffset": 55,
+                    "endColumn": 57,
+                    "endOffset": 108
+                },
+                "from": {
+                    "file": "C:\\Users\\victor\\Documents\\AR-Translation-Unity\\buid\\AR-Translation-Unity\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 2,
+                        "startColumn": 4,
+                        "startOffset": 55,
+                        "endColumn": 57,
+                        "endOffset": 108
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 3,
+                    "startColumn": 4,
+                    "startOffset": 113,
+                    "endLine": 4,
+                    "endColumn": 8,
+                    "endOffset": 206
+                },
+                "from": {
+                    "file": "C:\\Users\\victor\\Documents\\AR-Translation-Unity\\buid\\AR-Translation-Unity\\build\\intermediates\\bundles\\debug\\res\\values\\values.xml",
+                    "position": {
+                        "startLine": 3,
+                        "startColumn": 4,
+                        "startOffset": 113,
+                        "endLine": 4,
+                        "endColumn": 8,
+                        "endOffset": 206
+                    }
+                }
+            }
+        ]
+    }
+]
