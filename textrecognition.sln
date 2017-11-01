@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "textrecognition", "Assembly-CSharp.csproj", "{2CE5AB92-948E-F844-F482-6775E41A7EB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "textrecognition", "Assembly-CSharp-Editor.csproj", "{985F69C5-2686-CEBC-48C8-79837C9D3F27}"
+EndProject
+Project("{1D706326-9182-0F9F-C4AC-DAC4437129CB}") = "textrecognition", "Assembly-UnityScript-Editor-firstpass.unityproj", "{FB698042-D945-2641-3C80-2CF778D7CB3E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2CE5AB92-948E-F844-F482-6775E41A7EB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CE5AB92-948E-F844-F482-6775E41A7EB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CE5AB92-948E-F844-F482-6775E41A7EB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CE5AB92-948E-F844-F482-6775E41A7EB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{985F69C5-2686-CEBC-48C8-79837C9D3F27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{985F69C5-2686-CEBC-48C8-79837C9D3F27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{985F69C5-2686-CEBC-48C8-79837C9D3F27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{985F69C5-2686-CEBC-48C8-79837C9D3F27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB698042-D945-2641-3C80-2CF778D7CB3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB698042-D945-2641-3C80-2CF778D7CB3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB698042-D945-2641-3C80-2CF778D7CB3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB698042-D945-2641-3C80-2CF778D7CB3E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
