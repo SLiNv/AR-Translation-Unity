@@ -5,6 +5,9 @@ Confidential and Proprietary - Protected under copyright and other laws.
 ==============================================================================*/
 
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine.UI;
 
 namespace Vuforia
 {
@@ -70,9 +73,19 @@ namespace Vuforia
 
         private void OnTrackingFound()
         {
+			
+			string sentence = "";
+			StateManager stateManager = TrackerManager.Instance.GetStateManager();
+			IEnumerable<WordResult> wordResults = stateManager.GetWordManager().GetActiveWordResults();
+			foreach (WordResult wordResult in wordResults)
+			{
+				Word word = wordResult.Word;
+				sentence += word.StringValue + " ";
+
+			}
 
 			spanishText.gameObject.SetActive (true);
-
+			GameObject.Find ("Canvas/spanishText/Text").GetComponent<Text> ().text = sentence;
             Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
             Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 
