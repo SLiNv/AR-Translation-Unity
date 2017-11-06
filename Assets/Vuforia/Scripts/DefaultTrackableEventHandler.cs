@@ -35,7 +35,7 @@ namespace Vuforia
                 mTrackableBehaviour.RegisterTrackableEventHandler(this);
             }
 
-			spanishText.gameObject.SetActive(false);
+			spanishText.gameObject.SetActive(true);
         }
 
         #endregion // UNTIY_MONOBEHAVIOUR_METHODS
@@ -81,10 +81,9 @@ namespace Vuforia
 			{
 				Word word = wordResult.Word;
 				sentence += word.StringValue + " ";
-
+				Debug.Log (sentence);
 			}
-
-			spanishText.gameObject.SetActive (true);
+				
 			GameObject.Find ("Canvas/spanishText/Text").GetComponent<Text> ().text = sentence;
             Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
             Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
@@ -108,7 +107,6 @@ namespace Vuforia
         private void OnTrackingLost()
         {
 
-			spanishText.gameObject.SetActive (false);
 
             Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
             Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
