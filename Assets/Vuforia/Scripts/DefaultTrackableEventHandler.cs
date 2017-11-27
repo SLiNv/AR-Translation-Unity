@@ -56,7 +56,13 @@ namespace Vuforia
                 newStatus == TrackableBehaviour.Status.TRACKED ||
                 newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
             {
-                OnTrackingFound();
+				// change the position of the textbox
+				GameObject.Find ("Canvas/spanishText").transform.localPosition = mTrackableBehaviour.transform.localPosition;
+//				GameObject.Find ("Canvas/spanishText/Text").transform.localPosition = mTrackableBehaviour.transform.localPosition;
+//				GameObject.Find("Canvas/spanishText/Text").SetActive(false);
+				print (GameObject.Find ("Canvas/spanishText/Text").transform.localPosition);
+				print (mTrackableBehaviour.transform.localPosition);
+				OnTrackingFound();
             }
             else
             {
@@ -88,6 +94,7 @@ namespace Vuforia
             Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
             Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 
+//			GameObject.Find ("Canvas/spanishText/Text").transform.position = mTrackableBehaviour.transform.position;
             // Enable rendering:
             foreach (Renderer component in rendererComponents)
             {
