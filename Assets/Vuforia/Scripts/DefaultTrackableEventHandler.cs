@@ -63,16 +63,28 @@ namespace Vuforia
                 newStatus == TrackableBehaviour.Status.TRACKED ||
                 newStatus == TrackableBehaviour.Status.EXTENDED_TRACKED)
             {
-				// change the position of the textbox
+				// <comment>
+				// move the textbox and text next to the detected phrase
+				// mTrackableBehaviour.transform.localPosition gets the position of the detected phrase
+				// GameObject.Find ("Canvas/spanishText").transform.localPosition gets the position of the Canvas/spanishText
+				// </comment>
 				GameObject.Find ("Canvas/spanishText").transform.localPosition = mTrackableBehaviour.transform.localPosition;
-//				GameObject.Find ("Canvas/spanishText/Text").transform.localPosition = mTrackableBehaviour.transform.localPosition;
-//				GameObject.Find("Canvas/spanishText/Text").SetActive(false);
+
+				// <debug>
+				// print the locations
+				// </debug>
 				print (GameObject.Find ("Canvas/spanishText/Text").transform.localPosition);
 				print (mTrackableBehaviour.transform.localPosition);
+				// <comment>
+				// this will call the OnTrackingFound function when the trackable object is found
+				// </comment>
 				OnTrackingFound();
             }
             else
             {
+				// <comment>
+				// this will call the OnTrackingLost function when the trackable object is lost
+				// </comment>
                 OnTrackingLost();
             }
         }
@@ -83,25 +95,40 @@ namespace Vuforia
 
         #region PRIVATE_METHODS
 
-
+		// <comment>
+		// This function will be call when the target is found
+		// </comment>
         private void OnTrackingFound()
         {
-			
+			// <comment>
+			// sentence is a string that the detected phrase
+			// </comment>
 			string sentence = "";
 			StateManager stateManager = TrackerManager.Instance.GetStateManager();
+			// <comment>
+			// this will get the words detected in the image
+			// </comment>
 			IEnumerable<WordResult> wordResults = stateManager.GetWordManager().GetActiveWordResults();
 			foreach (WordResult wordResult in wordResults)
-			{
+			{	
+				// <comment>
+				// append the detected words to "sentence" object
+				// </comment>
 				Word word = wordResult.Word;
 				sentence += word.StringValue + " ";
 				Debug.Log (sentence);
 			}
+			// <comment>
+			// using the Trasnlator to translate the sentence from english to spanish
+			// </comment>
 			sentence = Translator.TranslateGoogleApisSimple (sentence, "en", "es");
+			// <comment>
+			// add the translated phrase to the textbox
+			// </comment>
 			GameObject.Find ("Canvas/spanishText/Text").GetComponent<Text> ().text = sentence;
             Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
             Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 
-//			GameObject.Find ("Canvas/spanishText/Text").transform.position = mTrackableBehaviour.transform.position;
             // Enable rendering:
             foreach (Renderer component in rendererComponents)
             {
@@ -144,7 +171,9 @@ namespace Vuforia
     }
 }
 
-
+// <summary>
+// a custom function which translated the phrase to a target language
+// </summary>
 public class Translator : MonoBehaviour {
 	public static string TranslateGoogleApisSimple(string InitialText, string fromCulture, string toCulture)
 	{

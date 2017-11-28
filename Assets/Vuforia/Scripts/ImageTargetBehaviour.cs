@@ -15,6 +15,9 @@ namespace Vuforia
     /// </summary>
     public class ImageTargetBehaviour : ImageTargetAbstractBehaviour
     {
+		// <summary>
+		// function is credited to developer.vuforia.com
+		// </summary>
 		public GameObject augmentationObject = null;  // you can use teapot or other object
 		public string dataSetName = "example";  
 
