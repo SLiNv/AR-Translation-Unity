@@ -13,7 +13,6 @@ using System.Net;
 using System.Net.Security;
 using System.Text;
 using System.Security.Cryptography.X509Certificates;
-using UnityEngine.UI;
 using SimpleJSON;
 
 namespace Vuforia

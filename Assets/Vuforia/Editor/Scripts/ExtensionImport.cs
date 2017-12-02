@@ -140,7 +140,7 @@ namespace Vuforia.EditorClasses
             if (!wsaSymbols.Contains(VUFORIA_WSA_SETTINGS))
             {
                 // The Windows SDK we want to use is "Universal 10"
-                EditorUserBuildSettings.wsaSDK = WSASDK.UWP;
+                // EditorUserBuildSettings.wsaSDK = WSASDK.UWP;
 
                 // We want to use the Webcam (obviously); to acheive this, UWP forces us to also require access 
                 // to the microphone (which is not so obvious)
