@@ -28,3 +28,5 @@
 /Users/yanjunli/AR-Translation-Unity/Temp/bin/Debug/Assembly-CSharp.dll
 /Users/yanjunli/AR-Translation-Unity/obj/Debug/Assembly-CSharp.dll
 /Users/yanjunli/AR-Translation-Unity/obj/Debug/Assembly-CSharp.dll.mdb
+/Users/yanjunli/AR-Translation-Unity/Temp/bin/Debug/Assembly-CSharp-firstpass.dll
+/Users/yanjunli/AR-Translation-Unity/Temp/bin/Debug/Assembly-CSharp-firstpass.dll.mdb

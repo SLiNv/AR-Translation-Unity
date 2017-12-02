@@ -30,7 +30,7 @@ namespace Vuforia
     
         #endregion // PRIVATE_MEMBER_VARIABLES
 
-		public GameObject spanishText;
+//		public GameObject spanishText;
 
         #region UNTIY_MONOBEHAVIOUR_METHODS
     
@@ -42,7 +42,7 @@ namespace Vuforia
                 mTrackableBehaviour.RegisterTrackableEventHandler(this);
             }
 
-			spanishText.gameObject.SetActive(true);
+			GameObject.Find ("Canvas/spanishText").gameObject.SetActive(true);
         }
 
         #endregion // UNTIY_MONOBEHAVIOUR_METHODS
