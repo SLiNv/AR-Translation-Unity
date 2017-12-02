@@ -29,6 +29,7 @@ namespace Vuforia
     
         #endregion // PRIVATE_MEMBER_VARIABLES
 
+		public int Score;
 //		public GameObject spanishText;
 
         #region UNTIY_MONOBEHAVIOUR_METHODS
@@ -40,8 +41,9 @@ namespace Vuforia
             {
                 mTrackableBehaviour.RegisterTrackableEventHandler(this);
             }
-
+			Score = 0;
 			GameObject.Find ("Canvas/spanishText").gameObject.SetActive(true);
+			GameObject.Find ("ScoreCanvas/Score").gameObject.SetActive (true);
         }
 
         #endregion // UNTIY_MONOBEHAVIOUR_METHODS
@@ -110,6 +112,7 @@ namespace Vuforia
 			IEnumerable<WordResult> wordResults = stateManager.GetWordManager().GetActiveWordResults();
 			foreach (WordResult wordResult in wordResults)
 			{	
+				Score++;
 				// <comment>
 				// append the detected words to "sentence" object
 				// </comment>
@@ -124,6 +127,7 @@ namespace Vuforia
 			// <comment>
 			// add the translated phrase to the textbox
 			// </comment>
+			GameObject.Find ("ScoreCanvas/Score/Text").GetComponent<Text>().text = "Score: " + Score;
 			GameObject.Find ("Canvas/spanishText/Text").GetComponent<Text> ().text = sentence;
             Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
             Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);

@@ -17,7 +17,7 @@ namespace Vuforia
         #region PRIVATE_METHODS
 
         /// <summary>
-        /// Initialize platform before first scene is loaded
+		/// Initialize platform before first scene is loOnLevelWasLoadedaded
         /// </summary>
         [RuntimeInitializeOnLoadMethod(RuntimeInitializeLoadType.BeforeSceneLoad)]
         private static void InitPlatform()
