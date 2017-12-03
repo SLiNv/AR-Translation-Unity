@@ -121,9 +121,17 @@ namespace Vuforia
 				Debug.Log (sentence);
 			}
 			// <comment>
-			// using the Trasnlator to translate the sentence from english to spanish
+			// using the Trasnlator to translate the sentence from english to target language
 			// </comment>
-			sentence = Translator.TranslateGoogleApisSimple (sentence, "en", "es");
+			string language = GameObject.Find("Language/Dropdown/Label").GetComponent<Text>().text;
+			if (language == "Spanish") {
+				language = "es";
+			} else if (language == "French") {
+				language = "fr";
+			} else if (language == "Greek") {
+				language = "el";
+			}
+			sentence = Translator.TranslateGoogleApisSimple (sentence, "en", language);
 			// <comment>
 			// add the translated phrase to the textbox
 			// </comment>
